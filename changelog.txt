@@ -1,0 +1,22 @@
+0.3.1
+- Fixing issue in which the plugin fails to load if the rewrite engine is not loaded or not enabled
+- Fixing issue in which the single plugin does not load the right config controller per default
+- Checking compatibility with wordpress 5.4
+
+0.3.2
+- Fixing issue in which plugin could not determine if mod_rewrite is enabled as module
+
+0.3.3
+- Fixing mod rewrite detection
+
+0.3.4
+- Fixing flush rewrite rules on update
+
+0.3.5
+- adding update hook to avoid broken url
+
+0.3.6
+- fixing issue in which urls get broken on update between 0.3.4 and upper
+
+0.3.7
+- fixing issue in template, where rewrite could not be determined

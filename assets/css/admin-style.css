@@ -1,0 +1,168 @@
+.suma-wrap fieldset {
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+.suma-wrap fieldset legend {
+    padding:0;
+}
+
+ul.message {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-left-width: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 10px 0;
+    padding: 8px 20px;
+}
+
+ul.error {
+    border-left-color: #dc3232;
+}
+
+ul.warning {
+    border-left-color: #ffb900;
+}
+
+ul.success {
+    border-left-color: #46b450;
+}
+
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
+}
+
+.clear {
+    clear:both;
+}
+
+.suma-wrap .suma-form-option {
+    clear:both;
+    margin:0 0 10px 0;
+}
+
+.suma-wrap .suma-form-label {
+    font-size:1.1em;
+    font-weight:bold;
+    width:100px;
+    display:inline-block;
+    float:left;
+}
+
+.suma-wrap .suma-form-actions {
+    margin:5px 0;
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.suma-wrap .suma-form-input input {
+    font-size:1em;
+    min-height:initial;
+    line-height:1.7em;
+}
+
+.suma-wrap .suma-content {
+    margin:20px 20px 20px 0;
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    box-shadow:0 0 2px #ccc;
+    padding:15px;
+}
+
+.suma-wrap .suma-heading img {
+    height:38px;
+    float:left;
+    margin-right:15px;
+}
+
+.suma-wrap .suma-heading h1 {
+    padding:0;
+    margin:0;
+    font-family:Lato, sans-serif;
+    line-height:1em;
+}
+
+.suma-wrap .suma-heading h1 small {
+    font-size:.6em;
+}
+
+.suma-wrap .suma-heading small {
+    line-height:1em;
+}
+
+.suma-wrap .suma-heading-options {
+    margin: -20px 0 0;
+    background:#555;
+    color:#fff;
+    padding:4px 10px;
+    font-size:.9em;
+}
+
+.suma-wrap .suma-heading-options a {
+    color:#fff;
+}
+
+.suma-wrap .suma-overview-plugins:after {
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+}
+
+.suma-wrap .suma-overview-plugin {
+    border:1px solid #ccc;
+    border-top:2px solid #c90;
+    border-radius:2px;
+    padding:15px;
+    margin-right:10px;
+    margin-bottom:10px;
+    position:relative;
+    width:calc(50% - 38px);
+    float:left;
+}
+
+.suma-wrap .suma-overview-plugin:nth-of-type(2n) {
+    margin-right:0;
+}
+
+.suma-wrap .suma-overview-plugin h3 {
+    margin:0;
+    padding-bottom:5px;
+    border-bottom:1px solid #ccc;
+}
+
+.suma-wrap .suma-overview-plugin:after {
+    content:'';
+    clear:both;
+    display:block;
+    height:0;
+}
+
+.suma-wrap .suma-overview-plugin .sumedia-overview-plugin-description {
+    display:inline-block;
+    width:calc(75% - 30px);
+}
+
+.suma-wrap .suma-overview-plugin .sumedia-overview-plugin-actions {
+    display:inline-block;
+    text-align:left;
+    border-left:1px solid #ddd;
+    vertical-align:top;
+    margin-left:10px;
+}
+
+.suma-wrap .suma-overview-plugin .sumedia-overview-plugin-actions p {
+    padding:5px 0 10px 10px;
+    margin:0;
+}
+
+.suma-wrap .suma-overview-plugin .sumedia-overview-plugin-description:after {
+    content:'';
+    clear:both;
+    height:0;
+    display:block;
+}

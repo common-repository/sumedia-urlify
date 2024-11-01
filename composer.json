@@ -1,0 +1,16 @@
+{
+    "name": "sumedia-wordpress/urlify",
+    "description": "Change sensitive URL's",
+    "type": "wordpress-plugin",
+    "require": {
+        "wp-cli/wp-config-transformer": "^1.2"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Sven Ullmann",
+            "email": "sumedia-wordpress@sumedia-webdesign.de"
+        }
+    ],
+    "minimum-stability": "dev"
+}

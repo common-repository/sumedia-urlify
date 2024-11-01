@@ -1,0 +1,72 @@
+<?php
+
+if (!defined('ABSPATH')) {
+    header( 'Status: 403 Forbidden' );
+    header( 'HTTP/1.1 403 Forbidden' );
+    exit();
+}
+
+global $wp_rewrite;
+
+$form = \Sumedia\Urlify\Base\Registry::get('Sumedia\Urlify\Admin\Form\Config');
+
+$version_option_name = str_replace('-', '_', SUMEDIA_URLIFY_PLUGIN_NAME) . '_version';
+$version = get_option($version_option_name) ? : 0;
+if (-1 == version_compare($version, '0.3.5')) {
+    $isRewriteEnabled = true;
+} else {
+    $isRewriteEnabled = isset($_SERVER['HTTP_MOD_REWRITE']) && $_SERVER['HTTP_MOD_REWRITE'] == 'On';
+}
+
+?>
+<div class="wrap suma-wrap">
+    <div class="suma-content">
+        <form class="suma-form" name="suma-urlfix-config-form" action="<?php echo admin_url('admin.php?page=' . SUMEDIA_URLIFY_PLUGIN_NAME . '&action=SetConfig'); ?>" method="post">
+            <?php if (!$isRewriteEnabled) : ?>
+                <div class="notice-warning">
+                    <?php echo __('This plugin needs an enabled permalink structure or an enabled mod_rewrite apache modul.'); ?>
+                </div>
+            <?php else: ?>
+                <input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce(); ?>" />
+                <fieldset>
+                    <legend><?php echo esc_html(__('Setup URL Rewrites', SUMEDIA_URLIFY_PLUGIN_NAME)); ?></legend>
+                    <div class="suma-form-option">
+                        <div class="suma-form-label"><label><?php echo esc_html(__('Admin URL', SUMEDIA_URLIFY_PLUGIN_NAME)); ?>:</label></div>
+                        <div class="suma-form-input">
+                            <?php echo site_url() . '/wp-admin'; ?> to:<br />
+                            <strong><?php echo site_url(); ?>/</strong> <input name="admin_url" size="10" type="text" value="<?php echo esc_attr($form->get_data('admin_url')); ?>" />
+                        </div>
+                    </div>
+                    <div class="suma-form-option">
+                        <div class="suma-form-label"><label><?php echo __('Login URL', SUMEDIA_URLIFY_PLUGIN_NAME); ?>:</label></div>
+                        <div class="suma-form-input">
+                            <?php echo site_url() . '/wp-login.php'; ?> to:<br />
+                            <strong><?php echo site_url(); ?>/</strong> <input name="login_url" size="10" type="text" value="<?php echo esc_attr($form->get_data('login_url')); ?>" />
+                        </div>
+                    </div>
+                </fieldset>
+                <br />
+                <div class="suma-form-actions">
+                    <input class="button" type="submit" name="submit" value="<?php echo esc_attr(__('Save URL\'s', SUMEDIA_URLIFY_PLUGIN_NAME)); ?>" />
+                    <span class="right">
+                        <a href="javascript:void(0);" name="reset"><?php echo esc_html(__('Reset to Wordpress Defaults', SUMEDIA_URLIFY_PLUGIN_NAME)); ?></a>
+                    </span>
+                </div>
+            <?php endif; ?>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    (function($){
+
+        $(document).ready(function(){
+
+            $('form[name="suma-urlfix-config-form"] a[name="reset"]').click(function(){
+                $('form[name="suma-urlfix-config-form"] input[name="admin_url"]').val('wp-admin');
+                $('form[name="suma-urlfix-config-form"] input[name="login_url"]').val('wp-login.php');
+            });
+
+        });
+
+    }(jQuery));
+</script>

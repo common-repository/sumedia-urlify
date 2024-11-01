@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: sumedia-urlify\n"
+"POT-Creation-Date: 2019-12-15 15:04+0100\n"
+"PO-Revision-Date: 2019-12-15 15:04+0100\n"
+"Last-Translator: Sven Ullmann <kontakt@sumedia-webdesign.de>\n"
+"Language-Team: Sven Ullmann <kontakt@sumedia-webdesign.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: sumedia-urlify.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: admin/controller/class-admin-controller-config.php:16
+msgid "Urlify"
+msgstr "Urlify"
+
+#: admin/controller/class-admin-controller-config.php:17
+#: inc/class-plugin.php:80
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: admin/controller/class-admin-controller-config.php:21
+msgid "Back to the plugin overview"
+msgstr "Zurück zur Plugin Übersicht"
+
+#: admin/controller/class-admin-controller-setconfig.php:26
+msgid "The data has successfully been saved"
+msgstr "Die Daten wurden erfolgreich gespeichert"
+
+#: admin/controller/class-admin-controller-setconfig.php:28
+msgid "The data could not be setted"
+msgstr "Die Daten konnten nicht gesetzt werden"
+
+#: admin/form/class-admin-form-config.php:20
+msgid "The form could not be verified, please try again"
+msgstr ""
+"Das Formular konnte nicht verifiziert werden, bitte versuchen Sie es erneut"
+
+#: admin/form/class-admin-form-config.php:25
+#: admin/form/class-admin-form-config.php:30
+#, php-format
+msgid "Missing parameter: %s."
+msgstr "Fehlender Parameter: %s."
+
+#: admin/form/class-admin-form-config.php:35
+#: admin/form/class-admin-form-config.php:40
+#, php-format
+msgid "The given slug: %s is not a valid slug."
+msgstr "Der übergebene URL-Teil: %s ist nicht valide."
+
+#: inc/class-htaccess.php:37
+msgid "Admin URL is not a valid slug"
+msgstr "Der übergebene URL-Teil: %s ist nicht valide"
+
+#: inc/class-htaccess.php:40
+msgid "Login URL is not a valid slug"
+msgstr "Der übergebene URL-Teil: %s ist nicht valide"
+
+#: inc/class-htaccess.php:75
+msgid "The class has not been initialized proper"
+msgstr "Die Klasse muss initialisiert werden"
+
+#: inc/class-htaccess.php:118
+msgid "Could not set rewrite to incorrect slug"
+msgstr "Rewrite konnte wegen einer fehlerhaften URL nicht gesetzt werden"
+
+#: admin/templates/config.phtml:17
+msgid "Setup URL Rewrites"
+msgstr "URL Rewrites einrichten"
+
+#: admin/templates/config.phtml:19
+msgid "Admin URL"
+msgstr "Admin URL"
+
+#: admin/templates/config.phtml:26
+msgid "Login URL"
+msgstr "Login URL"
+
+#: admin/templates/config.phtml:35
+msgid "Save URL's"
+msgstr "URL's speichern"
+
+#: admin/templates/config.phtml:37
+msgid "Reset to Wordpress Defaults"
+msgstr "Zu WordPress Standard zurücksetzen"
+
+#: admin/templates/plugin.phtml:14
+#, php-format
+msgid ""
+"Important: Before you can remove this plugin you have to deactivate it. "
+"%sMore Details%s"
+msgstr ""
+"Wichtig: Bevor Sie dieses Plugin entfernen können, müssen Sie es "
+"deaktivieren. %sMehr Details%s"
+
+#: admin/templates/plugin.phtml:25
+msgid ""
+"This Plugin will provide a way to disallow access to /wp-admin/ with the "
+"renaming of the backends default url. It can rewrite the wp-login.php "
+"location too, so bots will have no chance to find the login script."
+msgstr ""
+"Dieses Plugin stellt eine Lösung zur Verfügung um den Zugriff auf /wp-admin/ "
+"zu verbieten und dessen URL zu ändern.\n"
+"Es kann auch die wp-login.php URI überschreiben, so, dass Bots hier keine "
+"Chance haben das Loginscript zu finden."
+
+#. Plugin Name of the plugin/theme
+msgid "Sumedia Urlify"
+msgstr "Sumedia Urlify"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/sumedia-wordpress/urlify"
+msgstr "https://github.com/sumedia-wordpress/urlify"
+
+#. Description of the plugin/theme
+msgid "Changes important URL's to improve security"
+msgstr "Ändert wichtige URL's um die Sicherheit zu erhöhen"
+
+#. Author of the plugin/theme
+msgid "Sven Ullmann"
+msgstr "Sven Ullmann"
+
+#. Author URI of the plugin/theme
+msgid "https://www.sumedia-webdesign.de"
+msgstr "https://www.sumedia-webdesign.de"
+
+#~ msgid ""
+#~ "In order to use Sumedia Plugins you need to install Sumedia Base Plugin "
+#~ "(sumedia-base)."
+#~ msgstr ""
+#~ "Um Sumedia Plugins zu verwenden benötigen Sie das Sumedia Base Plugin "
+#~ "(sumedia-base)"
+
+#~ msgid "Sumedia URL Changer"
+#~ msgstr "Sumedia URL Changer"
+
+#~ msgid "Urlify Configuration"
+#~ msgstr "Urlify Konfiguration"

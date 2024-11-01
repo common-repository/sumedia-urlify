@@ -1,0 +1,26 @@
+<?php
+
+if (!defined('ABSPATH')) {
+    header( 'Status: 403 Forbidden' );
+    header( 'HTTP/1.1 403 Forbidden' );
+    exit();
+}
+
+?>
+<div class="suma-content">
+    <div class="suma-heading">
+        <img src="<?php echo esc_attr($this->get_iconfile()); ?>" alt="<?php echo esc_attr($this->get_title()); ?>" />
+        <h1><?php echo esc_html($this->get_title()); ?> <small>&ndash; <?php echo esc_html($this->get_side_title()); ?></small></h1>
+        <small><?php echo esc_html(__('Version', 'sumedia-base')); ?>: <?php echo esc_html($this->get_version()); ?></small>
+    </div>
+</div>
+<?php if (!empty($this->get_options())) : ?>
+    <div class="suma-heading-options">
+        <?php $i = 1; foreach ($this->get_options() as $data) : ?>
+            <a href="<?php echo esc_url($data['url']); ?>"><?php echo esc_html($data['name']); ?></a>
+            <?php if ($i++ < count($this->get_options())) : ?>
+                &nbsp; | &nbsp;
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

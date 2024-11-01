@@ -1,0 +1,21 @@
+<?php
+
+if (!defined('ABSPATH')) {
+    header( 'Status: 403 Forbidden' );
+    header( 'HTTP/1.1 403 Forbidden' );
+    exit();
+}
+
+?>
+<div class="wrap suma-wrap">
+
+    <?php
+        if ($this->get_heading_view()) {
+            $this->get_heading_view()->render();
+        }
+
+        if ($this->get_content_view()) {
+            $this->get_content_view()->render();
+        }
+    ?>
+</div>
